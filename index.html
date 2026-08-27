@@ -44,7 +44,7 @@ ctx.font = "bold 8px Arial";
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 
-let scale = 11;
+let scale = 4;
 let i = 0;
 
 function animate() {
@@ -55,7 +55,7 @@ function animate() {
     const x =
         16 *
         Math.pow(Math.sin(angle), 3) *
-        scale * 1.5;
+        scale;
 
     const y =
         (
@@ -64,7 +64,7 @@ function animate() {
             - 2 * Math.cos(3 * angle)
             - Math.cos(4 * angle)
         ) *
-        scale * 1.5;
+        scale;
 
     ctx.fillStyle = "#ffb6c1";
 
@@ -82,12 +82,12 @@ function animate() {
 
         i = 0;
 
-        // كيزيد الحجم بحال scale فـ Python
+        // كيزيد الحجم شوية بشوية
         scale++;
 
-        // من 11 حتى 16
-        if (scale > 16) {
-            scale = 11;
+        // من 4 حتى 8
+        if (scale > 8) {
+            scale = 4;
         }
     }
 
